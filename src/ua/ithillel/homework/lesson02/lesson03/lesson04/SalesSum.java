@@ -5,7 +5,8 @@ public class SalesSum {
         int productNumber = 1;
         String productName = "smartphone";
         String CURRENCY = "EUR";
-        double salesByDay = 2430.68;
-        int salesDays = 5;
+        float salesByDay = 2430.68F;
+        int totalDays = 5;
+        double totalSales = totalDays * salesByDay;
     }
 }
