@@ -6,5 +6,6 @@ public class SalesSum {
         String productName = "smartphone";
         String CURRENCY = "EUR";
         double salesByDay = 2430.68;
+        int salesDays = 5;
     }
 }
