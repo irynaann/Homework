@@ -8,5 +8,6 @@ public class SalesSum {
         float salesByDay = 2430.68F;
         int totalDays = 5;
         double totalSales = totalDays * salesByDay;
+        double AverageSalesByday = totalSales / totalDays;
     }
 }
