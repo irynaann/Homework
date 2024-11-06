@@ -1,4 +1,4 @@
-package ua.ithillel.homework.lesson03;
+package ua.ithillel.homework.lesson02.lesson03;
 
 public class GitOnlineStore {
     public static void main(String[] args) {

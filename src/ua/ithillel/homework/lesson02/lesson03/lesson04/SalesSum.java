@@ -12,5 +12,10 @@ public class SalesSum {
         System.out.printf("Product No %d: %s, %n", productNumber, productName);
         System.out.printf("total sales for %d days is %s %.2f. %n", totalDays, CURRENCY, totalSales);
         System.out.printf("sales by day is %s %.2f.",CURRENCY, AverageSalesByday);
+
+        productNumber = 2;
+        productName = "laptop";
+        salesByDay = 10486.85F;
+        totalDays = 7;
     }
 }
