@@ -17,5 +17,7 @@ public class SalesSum {
         productName = "laptop";
         salesByDay = 1498.12F;
         totalDays = 7;
+        totalSales = totalDays * salesByDay;
+        averageSalesByday = totalSales / totalDays;
     }
 }
