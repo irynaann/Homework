@@ -8,10 +8,10 @@ public class SalesSum {
         float salesByDay = 2430.68F;
         int totalDays = 5;
         double totalSales = totalDays * salesByDay;
-        double AverageSalesByday = totalSales / totalDays;
+        double averageSalesByday = totalSales / totalDays;
         System.out.printf("Product No %d: %s, %n", productNumber, productName);
         System.out.printf("total sales for %d days is %s %.2f. %n", totalDays, CURRENCY, totalSales);
-        System.out.printf("sales by day is %s %.2f.",CURRENCY, AverageSalesByday);
+        System.out.printf("sales by day is %s %.2f.", CURRENCY, averageSalesByday);
 
         productNumber = 2;
         productName = "laptop";
