@@ -15,7 +15,7 @@ public class SalesSum {
 
         productNumber = 2;
         productName = "laptop";
-        salesByDay = 10486.85F;
+        salesByDay = 1498.12F;
         totalDays = 7;
     }
 }
