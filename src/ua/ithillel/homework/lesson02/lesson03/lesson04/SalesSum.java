@@ -19,5 +19,8 @@ public class SalesSum {
         totalDays = 7;
         totalSales = totalDays * salesByDay;
         averageSalesByday = totalSales / totalDays;
+        System.out.printf("Product No %d: %s, %n", productNumber, productName);
+        System.out.printf("total sales for %d days is %s %.2f. %n", totalDays, CURRENCY, totalSales);
+        System.out.printf("sales by day is %s %.2f.", CURRENCY, averageSalesByday);
     }
 }
