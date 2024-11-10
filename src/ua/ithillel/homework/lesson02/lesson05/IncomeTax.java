@@ -7,11 +7,6 @@ public class IncomeTax {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter income: ");
         int income = scanner.nextInt();
-        System.out.println("Tax rate for income to 10000");
-        double rate1 = scanner.nextDouble();
-        System.out.println("Tax rate for income from 10000 to 25000");
-        double rate2 = scanner.nextDouble();
-        System.out.println("Tax rate for income from 25000");
-        double rate3 = scanner.nextDouble();
+        double taxRate;
     }
 }
