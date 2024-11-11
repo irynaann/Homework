@@ -13,7 +13,7 @@ public class IncomeTax {
             taxRate = income * 2.5 / 100;
             System.out.println("Tax Amount: " + taxRate);
         } else if (income > 10000 && income <= 25000) {
-            taxRate = income * 4.2 / 100;
+            taxRate = income * 4.3 / 100;
             System.out.println("Tax Amount: " + taxRate);
         } else if (income > 25000) {
             taxRate = income * 6.7 / 100;
