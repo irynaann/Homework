@@ -1,4 +1,4 @@
-package ua.ithillel.homework.lesson02;
+package ua.ithillel.homework.lesson03.lesson04.lesson02;
 
 public class OrdersOnlineStore {
     public static void main(String[] args) {
@@ -12,5 +12,7 @@ public class OrdersOnlineStore {
         System.out.println("Product: " + productName + ",");
         System.out.println("Product: " + CURRENCY + " " + productPrice + ".");
         System.out.println("Address: " + address);
+
+
     }
 }
