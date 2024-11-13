@@ -10,9 +10,11 @@ public class CycleFor {
         maxRange = scanner.nextInt();
 
         int sum = 0;
+        int numeration = 0;
         for (int num = 1; num <= maxRange; num++) {
             sum += num;
-            System.out.println("Num is " + num + " sum is: " + sum);
+            numeration++;
+            System.out.println(numeration + ")" + " Num is " + num + " sum is: " + sum);
         }
     }
 }
