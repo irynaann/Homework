@@ -18,6 +18,8 @@ public class CycleWhile {
             numeration++;
             num++;
         }
+        System.out.println("------------------------");
+        System.out.println("Sum of numbers is " + sum);
     }
 }
 
