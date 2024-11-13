@@ -12,7 +12,7 @@ public class CycleFor {
         int sum = 0;
         for (int num = 1; num <= maxRange; num++) {
             sum += num;
-            System.out.println(numeration + ")" + " Num is " + num + " sum is: " + sum);
+            System.out.println(num + ")" + " Num is " + num + " sum is: " + sum);
         }
         System.out.println("------------------------");
         System.out.println("Sum of numbers is " + sum);
