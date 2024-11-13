@@ -17,6 +17,7 @@ public class CycleFor {
             numeration++;
             System.out.println(numeration + ")" + " Num is " + num + " sum is: " + sum);
         }
+        System.out.println("------------------------");
         System.out.println("Sum of numbers is " + sum);
     }
 }
