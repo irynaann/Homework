@@ -10,7 +10,7 @@ public class CycleDoWhile {
         maxRange = scanner.nextInt();
 
         int num = 1;
-        int sum = 1;
+        int sum = 0;
         int numeration = 1;
         do {
             System.out.println(numeration + ")" + " Num is "
