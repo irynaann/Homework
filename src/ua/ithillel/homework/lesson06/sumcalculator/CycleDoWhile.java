@@ -19,5 +19,7 @@ public class CycleDoWhile {
             sum += num;
             num++;
         } while (num <= maxRange);
+        System.out.println("------------------------");
+        System.out.println("Sum of numbers is " + sum);
     }
 }
