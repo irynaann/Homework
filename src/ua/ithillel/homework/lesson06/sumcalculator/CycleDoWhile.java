@@ -13,10 +13,10 @@ public class CycleDoWhile {
         int sum = 0;
         int numeration = 1;
         do {
+            sum += num;
             System.out.println(numeration + ")" + " Num is "
                     + num + "," + " sum is: " + sum);
             numeration++;
-            sum += num;
             num++;
         } while (num <= maxRange);
         System.out.println("------------------------");
