@@ -1,6 +1,7 @@
 package ua.ithillel.homework.lesson06.sumcalculator;
 
 import java.util.Scanner;
+import java.util.SortedMap;
 
 public class CycleFor {
     public static void main(String[] args) {
@@ -16,5 +17,6 @@ public class CycleFor {
             numeration++;
             System.out.println(numeration + ")" + " Num is " + num + " sum is: " + sum);
         }
+        System.out.println("Sum of numbers is " + sum);
     }
 }
