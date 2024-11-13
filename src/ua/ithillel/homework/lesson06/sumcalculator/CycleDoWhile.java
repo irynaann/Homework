@@ -10,14 +10,14 @@ public class CycleDoWhile {
         maxRange = scanner.nextInt();
 
         int num = 1;
-        int sum = 0;
+        int sum = 1;
         int numeration = 1;
         do {
             System.out.println(numeration + ")" + " Num is "
                     + num + "," + " sum is: " + sum);
             numeration++;
-            sum += num;
             num++;
+            sum += num;
         } while (num <= maxRange);
         System.out.println("------------------------");
         System.out.println("Sum of numbers is " + sum);
