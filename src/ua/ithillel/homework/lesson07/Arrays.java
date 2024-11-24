@@ -23,25 +23,24 @@ public class Arrays {
                 sum += num[i];
             }
         }
-        System.out.print("Cума від'ємних чисел: " + sum);
-        System.out.println();
-        System.out.print("Кількість парних чисел: ");
-        int count = 0;
+        System.out.println("Cума від'ємних чисел: " + sum);
+
+        int evenCount = 0;
         for (int i = 0; i < num.length; i++) {
             if (num[i] % 2 == 0) {
-                count += num.length;
-                System.out.print(count + " ");
+                evenCount ++;
             }
         }
-        System.out.println();
-        System.out.print("Кількість непарних чисел: ");
+        System.out.println("Кількість парних чисел: " + evenCount);
+
+        int oddCount = 0;
         for (int i = 0; i < num.length; i++) {
             if (num[i] % 2 != 0) {
-                count += num.length;
-                System.out.print(count + " ");
+                oddCount++;
             }
         }
-        System.out.println();
+        System.out.print("Кількість непарних чисел: " + oddCount);
+
         int min = 0;
         int max = 0;
         for (int i = 0; i < num.length; i++) {
