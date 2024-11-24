@@ -16,10 +16,20 @@ public class Arrays {
         }
         int sum = 0;
         for (int i = 0; i < num.length; i++) {
-        if(num[i] < 0) {
-            sum += num[i];
-            System.out.println("Cума: " + sum);
+            if (num[i] < 0) {
+                sum += num[i];
+                System.out.println("Cума від'ємних чисел: " + sum);
+            }
         }
+        int count = 0;
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] % 2 == 0) {
+                count += num.length;
+                System.out.println("Кількість парних чисел: " + count);
+            } else if (num[i] % 2 != 0){
+                count += num.length;;
+                System.out.println("Кількість непарних чисел: " + count);
+            }
         }
 
     }
