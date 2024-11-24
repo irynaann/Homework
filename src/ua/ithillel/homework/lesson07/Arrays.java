@@ -29,7 +29,7 @@ public class Arrays {
             }
         }
         for (int i = 0; i < num.length; i++) {
-           if (num[i] % 2 != 0) {
+            if (num[i] % 2 != 0) {
                 count += num.length;
                 System.out.println("Кількість непарних чисел: " + count);
             }
@@ -47,6 +47,19 @@ public class Arrays {
                 max = num[i];
                 System.out.println("Найбільший елемент: " + max + " з індексом " + i);
             }
+        }
+        int sum2 = 0;
+        int average;
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] < min) {
+                min = num[i];
+                sum2 += min;
+                average = sum2 / num.length;
+                System.out.println("Середнє арифметичне чисел після першого від'ємного числа: " + average);
+            } else {
+                System.out.println("There are no negative numbers");
+            }
+
         }
     }
 }
