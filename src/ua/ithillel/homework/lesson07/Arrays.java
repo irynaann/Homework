@@ -26,11 +26,27 @@ public class Arrays {
             if (num[i] % 2 == 0) {
                 count += num.length;
                 System.out.println("Кількість парних чисел: " + count);
-            } else if (num[i] % 2 != 0){
-                count += num.length;;
+            }
+        }
+        for (int i = 0; i < num.length; i++) {
+           if (num[i] % 2 != 0) {
+                count += num.length;
                 System.out.println("Кількість непарних чисел: " + count);
             }
         }
-
+        int min = 0;
+        int max = 0;
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] < min) {
+                min = num[i];
+                System.out.println("Найменший елемент: " + min);
+            }
+        }
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] > max) {
+                max = num[i];
+                System.out.println("Найбільший елемент: " + max);
+            }
+        }
     }
 }
