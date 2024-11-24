@@ -39,13 +39,13 @@ public class Arrays {
         for (int i = 0; i < num.length; i++) {
             if (num[i] < min) {
                 min = num[i];
-                System.out.println("Найменший елемент: " + min);
+                System.out.println("Найменший елемент: " + min + " з індексом " + i);
             }
         }
         for (int i = 0; i < num.length; i++) {
             if (num[i] > max) {
                 max = num[i];
-                System.out.println("Найбільший елемент: " + max);
+                System.out.println("Найбільший елемент: " + max + " з індексом " + i);
             }
         }
     }
