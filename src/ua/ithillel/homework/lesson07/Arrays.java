@@ -28,7 +28,7 @@ public class Arrays {
         int evenCount = 0;
         for (int i = 0; i < num.length; i++) {
             if (num[i] % 2 == 0) {
-                evenCount ++;
+                evenCount++;
             }
         }
         System.out.println("Кількість парних чисел: " + evenCount);
@@ -39,33 +39,40 @@ public class Arrays {
                 oddCount++;
             }
         }
-        System.out.print("Кількість непарних чисел: " + oddCount);
+        System.out.println("Кількість непарних чисел: " + oddCount);
 
-        int min = 0;
-        int max = 0;
+        int min= 0;
+        int minIndex= 0;
         for (int i = 0; i < num.length; i++) {
-            if (num[i] < min) {
+            if (num[i] < minIndex) {
                 min = num[i];
-                System.out.print("Найменший елемент: " + min + " з індексом " + i);
+                minIndex = i;
             }
         }
-        System.out.println();
+        System.out.println("Найменший елемент: " + min + " з індексом " + minIndex);
+
+        int max = 0;
+        int maxIndex= 0;
         for (int i = 0; i < num.length; i++) {
             if (num[i] > max) {
                 max = num[i];
-                System.out.print("Найбільший елемент: " + max + " з індексом " + i);
+                maxIndex = i;
             }
         }
+        System.out.print("Найбільший елемент: " + max + " з індексом " + maxIndex);
+
         System.out.print("Середнє арифметичне чисел після першого від'ємного числа: ");
         int sum2 = 0;
         int average;
-        for (int i = 0; i < num.length; i++) {
-            if (num[i] < min) {
-                min = num[i];
-                sum2 += min;
-                average = sum2 / num.length;
-                System.out.println(average);
-            } System.out.println("There are no negative numbers");
+//        for (int i = 0; i < num.length; i++) {
+//            if (num[i] < min) {
+//                min = num[i];
+//                sum2 += min;
+//                average = sum2 / num.length;
+//                System.out.println(average);
+//            }
+//            System.out.println("There are no negative numbers");
         }
     }
-}
+
+
