@@ -30,7 +30,6 @@ public class ArraysAlgorithm {
             System.out.print(arr + " ");
         }
         System.out.println();
-
         System.out.println("Number to search: ");
         int target = scanner.nextInt();
         int result = binarySearch(array, target);
@@ -38,7 +37,6 @@ public class ArraysAlgorithm {
             System.out.println("Not found");
         } else {
             System.out.println("Element found at index: " + result);
-
         }
     }
 
@@ -53,7 +51,6 @@ public class ArraysAlgorithm {
                 left = mid + 1;
             } else {
                 right = mid - 1;
-
             }
         }
         return -1;
