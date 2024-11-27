@@ -17,16 +17,23 @@ public class Methods {
 //        double height = scanner.nextDouble();
 //        double result = volumeCylinder(radius, height);
 //        System.out.println("2. Об'єм циліндра з радіусом " + radius + " і висотою " + height + " дорівнює " + result + ".");
-        System.out.println("Введіть довжину масиву: ");
-        int array = scanner.nextInt();
-        int [] a = new int [array];
-        System.out.println("Масив чисел: ");
-        for (int i = 0; i < a.length; i++) {
-            a[i] = ThreadLocalRandom.current().nextInt(0,101);
-            System.out.println(a[i]);
-        }
-        int sumArray = addSum(a);
-        System.out.println("Cума всіх елементів масиву дорівнює: " + sumArray);
+//        System.out.println("Введіть довжину масиву: ");
+//        int array = scanner.nextInt();
+//        int [] a = new int [array];
+//        System.out.println("Масив чисел: ");
+//        for (int i = 0; i < a.length; i++) {
+//            a[i] = ThreadLocalRandom.current().nextInt(0,101);
+//            System.out.println(a[i]);
+//        }
+//        int sumArray = addSum(a);
+//        System.out.println("Cума всіх елементів масиву дорівнює: " + sumArray);
+//        System.out.println("Введіть рядок: ");
+//        String line = scanner.nextLine();
+        System.out.println("Введіть а: ");
+        int a = scanner.nextInt();
+        System.out.println("Введіть b: ");
+        int b = scanner.nextInt();
+        System.out.println("Результат 2^3 дорівнює " + method5(a, b));
 
     }
 
@@ -40,13 +47,23 @@ public class Methods {
         return result;
     }
 
-    public static int addSum (int []a) {
+    public static int addSum(int[] a) {
         int sum = 0;
         for (int i = 0; i < a.length; i++) {
             sum += a[i];
         }
         return sum;
 
+    }
+
+    // не знаю як вирішити
+    // public static String reverseLine(String l) {
+    // char[] a = l.toCharArray();
+    // for( int i = 0 ;  i < l.length; i++ ){
+
+    public static int method5(double a, double b) {
+        double result = Math.pow(a, b);
+        return (int) result;
     }
 
 }
