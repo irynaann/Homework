@@ -1,8 +1,6 @@
 package ua.ithillel.homework.lesson10;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Methods {
     public static void main(String[] args) {
@@ -29,11 +27,22 @@ public class Methods {
 //        System.out.println("Cума всіх елементів масиву дорівнює: " + sumArray);
 //        System.out.println("Введіть рядок: ");
 //        String line = scanner.nextLine();
-        System.out.println("Введіть а: ");
-        int a = scanner.nextInt();
-        System.out.println("Введіть b: ");
-        int b = scanner.nextInt();
-        System.out.println("Результат 2^3 дорівнює " + method5(a, b));
+//        System.out.println("Введіть а: ");
+//        int a = scanner.nextInt();
+//        System.out.println("Введіть b: ");
+//        int b = scanner.nextInt();
+//        System.out.println("Результат 2^3 дорівнює " + method5(a, b));
+//        System.out.println("Введіть ціле число: ");
+//        int n = scanner.nextInt();
+//        scanner.nextLine();
+//        System.out.println("Введіть текстовий рядок: ");
+//        String userText = scanner.nextLine();
+//        output(userText);
+//        method6(n, userText);
+
+        System.out.println("Введіть рядок: " );
+        String line = scanner.nextLine();
+        System.out.println("Рядок в зворотньому порядку:" + reverseLine(line));
 
     }
 
@@ -56,14 +65,24 @@ public class Methods {
 
     }
 
-    // не знаю як вирішити
-    // public static String reverseLine(String l) {
-    // char[] a = l.toCharArray();
-    // for( int i = 0 ;  i < l.length; i++ ){
+    public static String reverseLine(String line) {
+        StringBuilder stringBuilder = new StringBuilder(line);
+        return stringBuilder.reverse().toString();
+    }
 
     public static int method5(double a, double b) {
         double result = Math.pow(a, b);
         return (int) result;
     }
 
+    public static void output(String text) {
+        System.out.println(text);
+    }
+
+    public static void method6(int n, String text) {
+        for (int i = 1; i < n; i++) {
+            System.out.println(text);
+        }
+
+    }
 }
