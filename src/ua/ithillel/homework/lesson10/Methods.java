@@ -1,68 +1,66 @@
 package ua.ithillel.homework.lesson10;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Methods {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-//        System.out.println("1. Введіть ціле число: ");
-//        int num = scanner.nextInt();
-//        int squareNumber = calculateSquare(num);
-//        System.out.println("Квадрат числа " + num + " дорівнює " + squareNumber + ".");
-//        System.out.println("2. Введіть радіус: ");
-//        double radius = scanner.nextDouble();
-//        System.out.println("Введіть висоту: ");
-//        double height = scanner.nextDouble();
-//        double result = volumeCylinder(radius, height);
-//        System.out.println("2. Об'єм циліндра з радіусом " + radius + " і висотою " + height + " дорівнює " + result + ".");
-//        System.out.println("Введіть довжину масиву: ");
-//        int array = scanner.nextInt();
-//        int [] a = new int [array];
-//        System.out.println("Масив чисел: ");
-//        for (int i = 0; i < a.length; i++) {
-//            a[i] = ThreadLocalRandom.current().nextInt(0,101);
-//            System.out.println(a[i]);
-//        }
-//        int sumArray = addSum(a);
-//        System.out.println("Cума всіх елементів масиву дорівнює: " + sumArray);
-//        System.out.println("Введіть рядок: ");
-//        String line = scanner.nextLine();
-//        System.out.println("Введіть а: ");
-//        int a = scanner.nextInt();
-//        System.out.println("Введіть b: ");
-//        int b = scanner.nextInt();
-//        System.out.println("Результат 2^3 дорівнює " + method5(a, b));
-//        System.out.println("Введіть ціле число: ");
-//        int n = scanner.nextInt();
-//        scanner.nextLine();
-//        System.out.println("Введіть текстовий рядок: ");
-//        String userText = scanner.nextLine();
-//        output(userText);
-//        method6(n, userText);
-
-        System.out.println("Введіть рядок: " );
+        System.out.println("Введіть ціле число: ");
+        int num = scanner.nextInt();
+        System.out.printf("Квадрат числа %d дорівнює %d.", num, calculateSquare(num));
+        System.out.println();
+        System.out.println("Введіть радіус: ");
+        double radius = scanner.nextDouble();
+        System.out.println("Введіть висоту: ");
+        double height = scanner.nextDouble();
+        System.out.printf("Об'єм циліндра з радіусом %.1f і висотою %.1f дорівнює %f.",
+                radius, height, volumeCylinder(radius, height));
+        System.out.println();
+        System.out.println("Введіть довжину масиву: ");
+        int arrayLength = scanner.nextInt();
+        int[] array = new int[arrayLength];
+        System.out.print("Масив чисел: [");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ThreadLocalRandom.current().nextInt(0, 101);
+            System.out.print(array[i] + " ");
+        }
+        System.out.println("]");
+        System.out.printf("Cума всіх елементів масиву дорівнює: %d.", addSum(array));
+        System.out.println();
+        scanner.nextLine();
+        System.out.println("Введіть рядок: ");
         String line = scanner.nextLine();
-        System.out.println("Рядок в зворотньому порядку:" + reverseLine(line));
-
+        System.out.println("Рядок в зворотньому порядку: " + reverseLine(line));
+        System.out.println("Введіть а: ");
+        int a = scanner.nextInt();
+        System.out.println("Введіть b: ");
+        int b = scanner.nextInt();
+        System.out.printf("Результат %d ^ %d дорівнює %d.",
+                a, b, doExponentiation(a, b));
+        System.out.println();
+        System.out.println("Введіть ціле число n: ");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Введіть текстовий рядок: ");
+        String text = scanner.nextLine();
+        printText(n, text);
     }
 
     public static int calculateSquare(int num) {
-        int result = num * num;
-        return result;
+        return num * num;
     }
 
     public static double volumeCylinder(double radius, double height) {
-        double result = 3.14 * (radius * radius) * height;
-        return result;
+        return 3.14 * (radius * radius) * height;
     }
 
-    public static int addSum(int[] a) {
+    public static int addSum(int[] array) {
         int sum = 0;
-        for (int i = 0; i < a.length; i++) {
-            sum += a[i];
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
         }
         return sum;
-
     }
 
     public static String reverseLine(String line) {
@@ -70,19 +68,14 @@ public class Methods {
         return stringBuilder.reverse().toString();
     }
 
-    public static int method5(double a, double b) {
+    public static int doExponentiation(double a, double b) {
         double result = Math.pow(a, b);
         return (int) result;
     }
 
-    public static void output(String text) {
-        System.out.println(text);
-    }
-
-    public static void method6(int n, String text) {
-        for (int i = 1; i < n; i++) {
+    public static void printText(int n, String text) {
+        for (int i = 0; i < n; i++) {
             System.out.println(text);
         }
-
     }
 }
