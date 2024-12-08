@@ -42,6 +42,28 @@ public class MultidimensionalArrays {
             }
         }
         System.out.println(oddSum);
+        System.out.println("Product of elements in even columns: ");
+        int evenProduct = 1;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (j % 2 == 0) {
+                    evenProduct *= matrix[i][j];
+                }
+            }
+        }
+        System.out.println(evenProduct);
+        System.out.println("Product of elements in odd columns: ");
+        int oddProduct = 1;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (j % 2 != 0) {
+                    oddProduct *= matrix[i][j];
+                }
+            }
+        }
+        System.out.println(oddProduct);
+
+
     }
 }
 
