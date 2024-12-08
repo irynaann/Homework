@@ -30,7 +30,18 @@ public class MultidimensionalArrays {
                     evenSum += matrix[i][j];
                 }
             }
-        } System.out.println(evenSum);
+        }
+        System.out.println(evenSum);
+        System.out.println("Sum of elements in odd rows: ");
+        int oddSum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (i % 2 != 0) {
+                    oddSum += matrix[i][j];
+                }
+            }
+        }
+        System.out.println(oddSum);
     }
 }
 
