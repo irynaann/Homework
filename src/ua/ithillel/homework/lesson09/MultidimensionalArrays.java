@@ -7,11 +7,9 @@ public class MultidimensionalArrays {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter size: ");
-        //int size = scanner.nextInt();
-        int size = 4;
+        int size = scanner.nextInt();
         System.out.println("Enter range: ");
-        // int range = scanner.nextInt();
-        int range = 4;
+        int range = scanner.nextInt();
         System.out.println("Matrix: ");
 
         int[][] matrix = new int[size][range];
