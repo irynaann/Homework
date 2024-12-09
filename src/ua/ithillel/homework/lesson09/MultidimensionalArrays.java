@@ -10,14 +10,14 @@ public class MultidimensionalArrays {
         //int size = scanner.nextInt();
         int size = 4;
         System.out.println("Enter range: ");
-        //int range = scanner.nextInt();
+        // int range = scanner.nextInt();
         int range = 4;
         System.out.println("Matrix: ");
 
         int[][] matrix = new int[size][range];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = ThreadLocalRandom.current().nextInt(1, 5);
+                matrix[i][j] = ThreadLocalRandom.current().nextInt(1, 51);
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
@@ -26,6 +26,11 @@ public class MultidimensionalArrays {
         System.out.println("Sum of elements in odd rows: " + calculateOddSum(matrix));
         System.out.println("Product of elements in even columns: " + calculateEvenProduct(matrix));
         System.out.println("Product of elements in odd columns: " + calculateOddProduct(matrix));
+        if (isMagicSquare(matrix)) {
+            System.out.println("The matrix is a magic square");
+        } else {
+            System.out.println("The matrix is not a magic square");
+        }
     }
 
     public static int calculateEvenSum(int[][] matrix) {
@@ -75,5 +80,35 @@ public class MultidimensionalArrays {
         }
         return oddProduct;
     }
-}
 
+    public static boolean isMagicSquare(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            if (matrix.length != matrix[i].length) {
+                return false;
+            }
+        }
+        int targetSum = 0;
+        for (int j = 0; j < matrix[0].length; j++) {
+            targetSum += matrix[0][j];
+        }
+
+        for (int i = 1; i < matrix.length; i++) {
+            int rowSum = 0;
+            for (int j = 0; j < matrix[i].length; j++) {
+                rowSum += matrix[i][j];
+            }
+
+            for (int j = 0; j < matrix[0].length; j++) {
+                int colSum = 0;
+                for (i = 0; i < matrix.length; i++) {
+                    colSum += matrix[i][j];
+
+                }
+            }
+            if (targetSum != rowSum || targetSum != rowSum) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
