@@ -8,12 +8,14 @@ public class Car {
         startElectricity();
         startCommand();
         startFuelSystem();
+        System.out.println("The car is ready to go");
     }
 
     public void stop() {
         stopElectricity();
         stopCommand();
         stopFuelSystem();
+        System.out.println("The car is stopped");
     }
 
     private void startElectricity() {
