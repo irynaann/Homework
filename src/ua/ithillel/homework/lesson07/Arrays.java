@@ -7,8 +7,7 @@ public class Arrays {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Add value: ");
-        // int value = scanner.nextInt();
-        int value = 4;
+        int value = scanner.nextInt();
         int[] num = new int[value];
         System.out.print("Елементи масиву: ");
         for (int i = 0; i < num.length; i++) {
