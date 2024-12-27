@@ -42,14 +42,14 @@ public class Arrays {
         System.out.println("Кількість непарних чисел: " + oddCount);
 
         int min = 0;
-        int minIndex = 0;
+        int index = 0;
         for (int i = 0; i < num.length; i++) {
-            if (num[i] < minIndex) {
+            if (num[i] < 0) {
                 min = num[i];
-                minIndex = i;
+                index = i;
             }
         }
-        System.out.println("Найменший елемент: " + min + " з індексом " + minIndex);
+        System.out.println("Найменший елемент: " + min + " з індексом " + index);
 
         int max = 0;
         int maxIndex = 0;
@@ -61,23 +61,23 @@ public class Arrays {
         }
         System.out.println("Найбільший елемент: " + max + " з індексом " + maxIndex);
 
-        int index = 0;
-        while (index < num.length && num [index] >= 0) {
-            index++;
+        int index1 = 0;
+        while (index1 < num.length && num[index1] >= 0) {
+            index1++;
         }
-        System.out.println("index == " + index);
-        if (index >= num.length){
+        System.out.println("index == " + index1);
+        if (index1 >= num.length) {
             System.out.println("No negative elements");
-        }else {
+        } else {
             sum = 0;
-            for (int i = index + 1; i < num.length; i++) {
+            for (int i = index1 + 1; i < num.length; i++) {
                 sum += num[i];
             }
             System.out.println("Sum of elements: " + sum);
-            if (index == num.length - 1) {
+            if (index1== num.length - 1) {
                 System.out.println("No elements");
             } else {
-                double average = (double) sum / (num.length - index - 1);
+                double average = (double) sum / (num.length - index1 - 1);
                 System.out.println("Average == " + average);
 
 
