@@ -52,14 +52,13 @@ public class Arrays {
         System.out.println("Найменший елемент: " + min + " з індексом " + index);
 
         int max = 0;
-        int maxIndex = 0;
         for (int i = 0; i < num.length; i++) {
-            if (num[i] > max) {
+            if (num[i] > 0) {
                 max = num[i];
-                maxIndex = i;
+                index = i;
             }
         }
-        System.out.println("Найбільший елемент: " + max + " з індексом " + maxIndex);
+        System.out.println("Найбільший елемент: " + max + " з індексом " + index);
 
         int index1 = 0;
         while (index1 < num.length && num[index1] >= 0) {
