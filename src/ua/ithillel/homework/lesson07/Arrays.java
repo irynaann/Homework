@@ -60,31 +60,14 @@ public class Arrays {
         }
         System.out.println("Найбільший елемент: " + max + " з індексом " + index);
 
-        int index1 = 0;
-        while (index1 < num.length && num[index1] >= 0) {
-            index1++;
-        }
-        System.out.println("index == " + index1);
-        if (index1 >= num.length) {
-            System.out.println("No negative elements");
-        } else {
-            sum = 0;
-            for (int i = index1 + 1; i < num.length; i++) {
-                sum += num[i];
+        int average = 0;
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] < 0) {
+                for (int j = i + 1; j < num.length; j++)
+                    average += num[j];
             }
-            System.out.println("Sum of elements: " + sum);
-            if (index1== num.length - 1) {
-                System.out.println("No elements");
-            } else {
-                double average = (double) sum / (num.length - index1 - 1);
-                System.out.println("Average == " + average);
-
-
-            }
+            break;
         }
-
+        System.out.println(average);
     }
 }
-
-
-
