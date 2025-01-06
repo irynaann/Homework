@@ -18,7 +18,6 @@ public class DayAdvise implements Advise {
                 break;
             case FRIDAY:
                 System.out.println("Happy Friday!");
-                break;
             case SATURDAY:
                 System.out.println("Discover new places");
                 break;

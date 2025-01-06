@@ -7,8 +7,7 @@ public class Arrays {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Add value: ");
-        // int value = scanner.nextInt();
-        int value = 4;
+        int value = scanner.nextInt();
         int[] num = new int[value];
         System.out.print("Елементи масиву: ");
         for (int i = 0; i < num.length; i++) {
@@ -42,50 +41,32 @@ public class Arrays {
         System.out.println("Кількість непарних чисел: " + oddCount);
 
         int min = 0;
-        int minIndex = 0;
+        int index = 0;
         for (int i = 0; i < num.length; i++) {
-            if (num[i] < minIndex) {
+            if (num[i] < 0) {
                 min = num[i];
-                minIndex = i;
+                index = i;
             }
         }
-        System.out.println("Найменший елемент: " + min + " з індексом " + minIndex);
+        System.out.println("Найменший елемент: " + min + " з індексом " + index);
 
         int max = 0;
-        int maxIndex = 0;
         for (int i = 0; i < num.length; i++) {
-            if (num[i] > max) {
+            if (num[i] > 0) {
                 max = num[i];
-                maxIndex = i;
+                index = i;
             }
         }
-        System.out.println("Найбільший елемент: " + max + " з індексом " + maxIndex);
+        System.out.println("Найбільший елемент: " + max + " з індексом " + index);
 
-        int index = 0;
-        while (index < num.length && num [index] >= 0) {
-            index++;
-        }
-        System.out.println("index == " + index);
-        if (index >= num.length){
-            System.out.println("No negative elements");
-        }else {
-            sum = 0;
-            for (int i = index + 1; i < num.length; i++) {
-                sum += num[i];
+        int average = 0;
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] < 0) {
+                for (int j = i + 1; j < num.length; j++)
+                    average += num[j];
             }
-            System.out.println("Sum of elements: " + sum);
-            if (index == num.length - 1) {
-                System.out.println("No elements");
-            } else {
-                double average = (double) sum / (num.length - index - 1);
-                System.out.println("Average == " + average);
-
-
-            }
+            break;
         }
-
+        System.out.println(average);
     }
 }
-
-
-
